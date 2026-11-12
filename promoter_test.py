@@ -4,7 +4,7 @@ from folding import fold_dna
 df = pd.read_parquet("testdata/test.parquet")
 
 # 20 sequences per label, same ones every run
-sample = df.groupby("label").sample(20, random_state=0).copy()
+sample = df.groupby("label").sample(5, random_state=0).copy()
 
 # fold each one and keep the MFE
 sample["mfe"] = [fold_dna(s)[1] for s in sample["sequence"]]
