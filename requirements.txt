@@ -4,3 +4,7 @@ datasets
 trl
 wandb
 notebook
+ViennaRNA==2.7.2
+pytest>=8
+pandas
+pyarrow
